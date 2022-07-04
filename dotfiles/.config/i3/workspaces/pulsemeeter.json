@@ -1,0 +1,38 @@
+{
+    // floating_con with 1 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+       "height": 646,
+       "width": 1084,
+       "x": 841,
+       "y": 434
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_on",
+            "geometry": {
+               "height": 620,
+               "width": 1080,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "percent": 1,
+            "swallows": [
+               {
+                   "class": "^Pulsemeeter$",
+                   "instance": "^pulsemeeter$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

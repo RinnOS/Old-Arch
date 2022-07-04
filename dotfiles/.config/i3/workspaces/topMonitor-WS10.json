@@ -1,0 +1,79 @@
+{
+    // floating_con with 1 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+       "height": 646,
+       "width": 1138,
+       "x": 1082,
+       "y": 431
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_on",
+            "geometry": {
+               "height": 620,
+               "width": 1134,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Pulsemeeter",
+            "percent": 1,
+            "swallows": [
+               {
+                  "class": "^Pulsemeeter$",
+                  "instance": "^pulsemeeter$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // floating_con with 1 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+       "height": 650,
+       "width": 300,
+       "x": 2696,
+       "y": 428
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 2,
+            "floating": "user_on",
+            "geometry": {
+               "height": 650,
+               "width": 300,
+               "x": 1890,
+               "y": 1295
+            },
+            "marks": [],
+            "name": "Friends List",
+            "percent": 1,
+            "swallows": [
+               {
+                  "class": "^Steam$",
+                  "instance": "^Steam$",
+                  "title": "^Friends\\ List$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
