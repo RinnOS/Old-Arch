@@ -24,7 +24,7 @@ DOTFILES=(
     '.config/flameshot'
 )
 
-LOCALDOTDIR=/mnt/Vault/Dotfiles/Linux
+LOCALDOTDIR=/mnt/Vault/Dotfiles/Linux/Arch
 LOCALDOTFILES=(
     # --- Home ---
     '.ssh'
