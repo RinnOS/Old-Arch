@@ -9,9 +9,9 @@ DRIVELABELS=(
 
 for label in "${DRIVELABELS[@]}"; do
     echo "Creating folder for ${label}"
-    mkdir /mnt/"${label}"
+    sudo mkdir /mnt/"${label}"
     echo
     echo "Mounting ${label} drive"
-    mount /dev/disk/by-label/"${label}" /mnt/"${label}"
+    sudo mount /dev/disk/by-label/"${label}" /mnt/"${label}"
     echo
 done
