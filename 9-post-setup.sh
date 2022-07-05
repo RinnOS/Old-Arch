@@ -13,13 +13,10 @@ DOTFILES=(
     '.emacs.d'
     '.doom.d'
     'wallpapers'
+    'scripts'
 
     # --- .config ---
     '.config/i3'
-    '.config/monitorLayout.sh'
-    '.config/nvidiaPipeline.sh'
-    '.config/autoStart.sh'
-    '.config/mountDrives.sh'
     '.config/pulsemeeter'
     '.config/flameshot'
 )

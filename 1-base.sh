@@ -104,7 +104,7 @@ for PKG in "${PKGS[@]}"; do
 done
 
 echo "Mounting drives"
-sh ./dotfiles/.config/mountDrives.sh
+sh ./dotfiles/scripts/mountDrives.sh
 
 echo "###########"
 echo "## DONE! ##"
