@@ -1,0 +1,38 @@
+git:
+  # --- Home ---
+  - .zshrc
+  - .gitconfig
+  - .emacs.d
+  - .doom.d
+  - wallpapers
+  - scripts
+
+  # --- .config ---
+  - .config/i3
+  - .config/pulsemeeter
+  - .config/flameshot
+
+local:
+  # --- Home ---
+  - .ssh
+  - .waterfox
+  - .vscode
+
+  # --- .config ---
+  - .config/BetterDiscord
+  - .config/Code
+  - .config/discord
+  - .config/discordcanary
+  - .config/FreeTube
+  - .config/Logseq
+  - .config/lutris
+  - .config/Rambox
+  - .config/rambox
+  - .config/wtwitch
+
+  # --- .local ---
+  - .local/share/lutris
+  - .local/share/Steam
+  - .local/share/vulkan
+  - .local/share/PolyMC
+  - .local/share/7DaysToDie
