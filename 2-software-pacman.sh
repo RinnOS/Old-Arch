@@ -5,74 +5,83 @@ echo "## INSTALLING SOFTWARE PACKAGES ##"
 echo "##################################"
 echo
 
-PKGS=(
-    # --- Terminal ---
-    'vim'
-    'wget'
-    'calc'
-    'neofetch'
+# PKGS=(
+#     # --- Terminal ---
+#     'vim'
+#     'wget'
+#     'calc'
+#     'neofetch'
 
-    # --- Games ---
-    'steam'
-    'gamemode'
-    'lib32-gamemode'
-    'lutris'
+#     # --- Games ---
+#     'steam'
+#     'gamemode'
+#     'lib32-gamemode'
+#     'lutris'
 
-    # --- Development ---
-    'nodejs'
-    'npm'
-    'yarn'
-    'git'
+#     # --- Development ---
+#     'nodejs'
+#     'npm'
+#     'yarn'
+#     'git'
 
-    # --- Virtualization ---
-    'virtualbox'
-    'virtualbox-host-dkms'
-    'virt-manager'
-    'virt-viewer'
+#     # --- Virtualization ---
+#     'virtualbox'
+#     'virtualbox-host-dkms'
+#     'virt-manager'
+#     'virt-viewer'
 
-    # --- Audio/Video ---
-    'vlc'
-    'mpv'
-    'feh'
+#     # --- Audio/Video ---
+#     'vlc'
+#     'mpv'
+#     'feh'
 
-    # --- Security ---
-    'firetools'
+#     # --- Security ---
+#     'firetools'
 
-    # --- Applications ---
-    'emacs'
-    'signal-desktop'
-    'discord'
-    'terminator'
-    'gimp'
-    'qbittorrent'
+#     # --- Applications ---
+#     'emacs'
+#     'signal-desktop'
+#     'discord'
+#     'terminator'
+#     'gimp'
+#     'qbittorrent'
 
-    # --- Office ---
-    'libreoffice'
+#     # --- Office ---
+#     'libreoffice'
 
-    # --- Dependencies ---
-    'ripgrep'
-    'fd'
-    'coreutils'
+#     # --- Dependencies ---
+#     'ripgrep'
+#     'fd'
+#     'coreutils'
 
-    # --- Utilities ---
-    'imwheel'
-    'flameshot'
-    'grub-customizer'
-    'numlockx'
+#     # --- Utilities ---
+#     'imwheel'
+#     'flameshot'
+#     'grub-customizer'
+#     'numlockx'
 
-    # --- Uncategorized ---
-    'aspell'
-    'aspell-en'
-    'aspell-sv'
-    'mono'
-    'perl-anyevent-i3'
-)
+#     # --- Uncategorized ---
+#     'aspell'
+#     'aspell-en'
+#     'aspell-sv'
+#     'mono'
+#     'perl-anyevent-i3'
+# )
 
 sudo pacman -Sy
-for PKG in "${PKGS[@]}"; do
-    echo "Installing ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+I=0
+
+while [ $I -le $(yq '.pacman | length' packages.yml) ]; do
+    PKG=$(yq .pacman[$I] packages.yml)
+    echo "Installing $PKG"
+    sudo pacman -S $PKG --noconfirm --needed
+    ((I++))
 done
+
+# for PKG in "${PKGS[@]}"; do
+#     echo "Installing ${PKG}"
+#     sudo pacman -S "$PKG" --noconfirm --needed
+# done
 
 echo "###########"
 echo "## DONE! ##"

@@ -1,0 +1,93 @@
+pacman:
+  # --- Terminal ---
+  - vim
+  - wget
+  - calc
+  - neofetch
+
+  # --- Games ---
+  - steam
+  - gamemode
+  - lib32-gamemode
+  - lutris
+
+  # --- Development ---
+  - nodejs
+  - npm
+  - yarn
+  - git
+
+  # --- Virtualization ---
+  - virtualbox
+  - virtualbox-host-dkms
+  - virt-manager
+  - virt-viewer
+
+  # --- Audio/Video ---
+  - vlc
+  - mpv
+  - feh
+
+  # --- Security ---
+  - firetools
+
+  # --- Applications ---
+  - emacs
+  - signal-desktop
+  - discord
+  - terminator
+  - gimp
+  - qbittorrent
+
+  # --- Office ---
+  - libreoffice
+
+  # --- Dependencies ---
+  - ripgrep
+  - fd
+  - coreutils
+
+  # --- Utilities ---
+  - imwheel
+  - flameshot
+  - grub-customizer
+  - numlockx
+
+  # --- Uncategorized ---
+  - aspell
+  - aspell-en
+  - aspell-sv
+  - mono
+  - perl-anyevent-i3
+
+aur:
+  # --- Utilities ---
+  - timeshift
+  - appimagelauncher
+  - optimus-manager
+  - optimus-manager-qt
+  - popsicle
+  - yt-dlg
+  - ventoy
+  - betterdiscordctl
+
+  # --- Audio/Video ---
+  - pulsemeeter
+  - wtwitch
+  - ani-cli
+  - yt-dlp
+
+  # --- Development ---
+  - visual-studio-code-bin
+  - gitfiend
+  - debtap
+
+  # --- Applications ---
+  - freetube-bin
+  - obsidian
+  - protonvpn
+  - waterfox-g4-bin
+
+  # --- Games ---
+  - itch
+  - polymc

@@ -29,6 +29,7 @@ PKGS=(
     'btop'
     'curl'
     'wget'
+    'go-yq'
 
     # --- Docker ---
     'docker'
