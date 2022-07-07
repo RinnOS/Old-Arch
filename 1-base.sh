@@ -6,7 +6,6 @@ echo "##############################"
 echo
 
 PKGS=(
-
     # --- Audio ---
     'pulseaudio'
     'pulseaudio-alsa'

@@ -49,6 +49,7 @@ git clone https://aur.archlinux.org/yay.git
 cd ${HOME}/yay
 makepkg -si
 
+cd ${HOME}/RinnOS
 I=0
 while [ $I -le $(yq '.aur | length' packages.yml) ]; do
     PKG=$(yq .aur[$I] packages.yml)
