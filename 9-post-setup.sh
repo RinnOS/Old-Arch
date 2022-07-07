@@ -57,6 +57,8 @@ sudo systemctl enable docker.service
 sudo systemctl start docker.service
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
 
 echo "---------------"
 echo "-- ZSH Setup --"
@@ -108,6 +110,19 @@ done
 #     echo "Linking ${LOCALDOTDIR}/${localdotfile} to ${HOME}/${localdotfile}"
 #     cp -faTs "${LOCALDOTDIR}/${localdotfile}" "${HOME}/${localdotfile}"
 # done
+
+echo "-------------------"
+echo "-- Virtulazation --"
+echo "-------------------"
+echo
+
+# Check if libvirtd group exists and create it if not
+if ! getent group libvirtd > /dev/null; then
+    echo "Creating libvirtd group"
+    sudo groupadd libvirtd
+fi
+
+sudo usermod -G libvirtd -a "${USER}"
 
 echo "-------------------------"
 echo "-- Some extra stuff... --"

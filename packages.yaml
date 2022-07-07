@@ -22,6 +22,8 @@ pacman:
   - virtualbox-host-dkms
   - virt-manager
   - virt-viewer
+  - qemu
+  - libvirt
 
   # --- Audio/Video ---
   - vlc
