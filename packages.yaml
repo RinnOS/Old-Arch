@@ -91,3 +91,8 @@ aur:
   # --- Games ---
   - itch
   - polymc
+
+appimage:
+  - name: Example
+    url: https://google.com
+    version: 0.2.2
