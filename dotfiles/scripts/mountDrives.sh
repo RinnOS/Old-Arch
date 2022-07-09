@@ -8,8 +8,11 @@ DRIVELABELS=(
 )
 
 for label in "${DRIVELABELS[@]}"; do
-    echo "Creating folder for ${label}"
-    sudo mkdir /mnt/"${label}"
+    if [ ! -d "/mnt/$label" ]; then
+        echo "Creating folder /mnt/$label"
+        mkdir "/mnt/$label"
+    fi
+
     echo
     echo "Mounting ${label} drive"
     sudo mount /dev/disk/by-label/"${label}" /mnt/"${label}"
