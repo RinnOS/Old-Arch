@@ -5,6 +5,9 @@ echo "## FINAL SETUPS ##"
 echo "##################"
 echo
 
+DOTDIR=$HOME/RinnOS/dotfiles
+LOCALDOTDIR=/mnt/Vault/Dotfiles/Linux/Arch
+
 echo "-----------------------"
 echo "-- Starting Services --"
 echo "-----------------------"
