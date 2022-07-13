@@ -10,7 +10,7 @@ DRIVELABELS=(
 for label in "${DRIVELABELS[@]}"; do
     if [ ! -d "/mnt/$label" ]; then
         echo "Creating folder /mnt/$label"
-        mkdir "/mnt/$label"
+        sudo mkdir "/mnt/$label"
     fi
 
     echo
