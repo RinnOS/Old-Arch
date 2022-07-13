@@ -13,6 +13,9 @@ paths:
   localdotdir: /mnt/Vault/Dotfiles/Linux/Arch
 
 drives:
+  - Vault
+  - BigDrive
+  - Data
 
 files:
   - ./packages.yaml
