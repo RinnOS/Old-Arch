@@ -6,7 +6,7 @@ echo "##############################"
 echo
 
 
-sudo pacman -Syu go-yq
+sudo pacman -Syu go-yq --noconfirm
 
 I=0
 while [ $I -le $(yq '.base | length' packages.yaml) ]; do
