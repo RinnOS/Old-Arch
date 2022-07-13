@@ -32,21 +32,29 @@ echo "-- Dealing with dotfiles --"
 echo "---------------------------"
 echo
 
-I=0
-while [ $I -le $(yq '.git | length' dotfiles.yaml) ]; do
-    dotfile=$(yq .git[$I] dotfiles.yaml)
-    DOTDIR=$(yq .paths.dotdir config.yaml)
+cd $HOME
 
-    if [ -z "$dotfile" ]; then
-        break
-    fi
+echo "Getting wallpapers..."
+git clone $(yq .links.wallpapers config.yaml)
 
-    rm -rf "${HOME}/$dotfile"
-    echo
-    echo "Linking ${DOTDIR}/${dotfile} to ${HOME}/${dotfile}"
-    cp -faTs "${DOTDIR}/${dotfile}" "${HOME}/${dotfile}"
-    ((I++))
-done
+echo "Getting dotfiles..."
+chezmoi init --apply $(yq .links.dotfiles config.yaml)
+
+# I=0
+# while [ $I -le $(yq '.git | length' dotfiles.yaml) ]; do
+#     dotfile=$(yq .git[$I] dotfiles.yaml)
+#     DOTDIR=$(yq .paths.dotdir config.yaml)
+
+#     if [ -z "$dotfile" ]; then
+#         break
+#     fi
+
+#     rm -rf "${HOME}/$dotfile"
+#     echo
+#     echo "Linking ${DOTDIR}/${dotfile} to ${HOME}/${dotfile}"
+#     cp -faTs "${DOTDIR}/${dotfile}" "${HOME}/${dotfile}"
+#     ((I++))
+# done
 
 I=0
 while [ $I -le $(yq '.local | length' dotfiles.yaml) ]; do
