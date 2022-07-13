@@ -1,0 +1,15 @@
+first_run: true
+
+autostart:
+  - name: discord
+    sleep: 3
+
+paths:
+  dotdir: ~/RinnOS/dotfiles
+  localdotdir: /mnt/Vault/Dotfiles/Linux/Arch
+
+drives:
+
+files:
+  - ./packages.yaml
+  - ./dotfiles.yaml

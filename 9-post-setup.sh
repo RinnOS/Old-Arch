@@ -5,9 +5,6 @@ echo "## FINAL SETUPS ##"
 echo "##################"
 echo
 
-DOTDIR=$HOME/RinnOS/dotfiles
-LOCALDOTDIR=/mnt/Vault/Dotfiles/Linux/Arch
-
 echo "-----------------------"
 echo "-- Starting Services --"
 echo "-----------------------"
@@ -38,6 +35,7 @@ echo
 I=0
 while [ $I -le $(yq '.git | length' dotfiles.yaml) ]; do
     dotfile=$(yq .git[$I] dotfiles.yaml)
+    DOTDIR=$(yq .paths.dotdir config.yaml)
 
     if [ -z "$dotfile" ]; then
         break
@@ -53,6 +51,7 @@ done
 I=0
 while [ $I -le $(yq '.local | length' dotfiles.yaml) ]; do
     localdotfile=$(yq .local[$I] dotfiles.yaml)
+    LOCALDOTDIR=$(yq .paths.localdotdir config.yaml)
 
     if [ -z "$localdotfile" ]; then
         break
