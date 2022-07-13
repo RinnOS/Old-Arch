@@ -35,10 +35,10 @@ echo
 cd $HOME
 
 echo "Getting wallpapers..."
-git clone $(yq .links.wallpapers config.yaml)
+git clone $(yq .links.wallpapers RinnOS/config.yaml)
 
 echo "Getting dotfiles..."
-chezmoi init --apply $(yq .links.dotfiles config.yaml)
+chezmoi init --apply $(yq .links.dotfiles RinnOS/config.yaml)
 
 # I=0
 # while [ $I -le $(yq '.git | length' dotfiles.yaml) ]; do
@@ -55,6 +55,7 @@ chezmoi init --apply $(yq .links.dotfiles config.yaml)
 #     cp -faTs "${DOTDIR}/${dotfile}" "${HOME}/${dotfile}"
 #     ((I++))
 # done
+cd $HOME/RinnOS
 
 I=0
 while [ $I -le $(yq '.local | length' dotfiles.yaml) ]; do
