@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Make sure script is run with sudo
+# Make sure script was run with sudo but not as root
 if [ "$EUID" -ne 0 ]; then
-  echo "Please run as root"
-  exit 1
+    echo "Please run this script with sudo but not as root."
+    exit 1
 fi
 
 loopScript=true
