@@ -83,6 +83,13 @@ fi
 
 sudo usermod -G libvirtd -a "${USER}"
 
+echo "--------------------------------"
+echo "-- Setting up optimus-manager --"
+echo "--------------------------------"
+
+echo "Copying optimus-manager config..."
+sudo cp ./files/optimus-manager.conf /etc/optimus-manager/optimus-manager.conf
+
 echo "-------------------------"
 echo "-- Some extra stuff... --"
 echo "-------------------------"
