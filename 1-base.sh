@@ -31,23 +31,12 @@ while [ ! $I -eq $(yq '.drives | length' config.yaml) ]; do
         sudo mkdir "/mnt/$DRIVE"
     fi
 
-    #sudo echo LABEL=$DRIVE /mnt/$DRIVE auto defaults 0 0 >> /etc/fstab
-
     sudo cat << EOF >> /etc/fstab
 LABEL=$DRIVE /mnt/$DRIVE auto defaults 0 0
 EOF
 
     ((I++))
 done
-
-# sudo cat <<EOF >> /etc/fstab
-# # RinnOS
-# LABEL=$()
-
-# EOF
-
-#echo "Mounting drives"
-#sh ./dotfiles/scripts/mountDrives.sh
 
 echo "###########"
 echo "## DONE! ##"
