@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Make sure script was run with sudo but not as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run this script with sudo but not as root."
+    exit 1
+fi
+
 echo "##############################"
 echo "## INSTALLING BASE PACKAGES ##"
 echo "##############################"
