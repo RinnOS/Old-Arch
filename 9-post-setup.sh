@@ -50,8 +50,8 @@ while [ ! $I -eq $(yq '.local | length' dotfiles.yaml) ]; do
 
     rm -rf "${HOME}/${localdotfile}"
     echo
-    echo "Linking ${LOCALDOTDIR}/${localdotfile} to ${HOME}/${localdotfile}"
-    cp -faTs "${LOCALDOTDIR}/${localdotfile}" "${HOME}/${localdotfile}"
+    echo "Copying ${LOCALDOTDIR}/${localdotfile} to ${HOME}/${localdotfile}"
+    cp -faT "${LOCALDOTDIR}/${localdotfile}" "${HOME}/${localdotfile}"
     ((I++))
 done
 

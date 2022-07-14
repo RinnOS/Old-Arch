@@ -5,7 +5,7 @@ autostart:
     sleep: 3
 
 links:
-  dotfiles: https://github.com/Rinnray/Dotfiles.git
+  dotfiles: https://gitlab.com/RinnOS/Dotfiles.git
   wallpapers: https://gitlab.com/RinnOS/Wallpapers.git
 
 paths:
