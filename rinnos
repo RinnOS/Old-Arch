@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 help() {
-    echo "Usage: $0 <command> [<args>]"
+    echo "Usage: rinnos <command> [<args>]"
     echo "Commands:"
     echo "  help              Show this help message"
     echo "  refresh-local     Refresh local dotfiles"
