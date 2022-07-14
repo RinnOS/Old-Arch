@@ -8,7 +8,7 @@ help() {
 }
 
 # Command to copy local dotfiles to dotfiles on drive
-refreshlocal() {
+synclocal() {
     echo "Are you sure? This will overwrite your dotfiles on the drive with your local dotfiles."
     read -p "Continue? [y/N] " -n 1 -r
 
@@ -39,8 +39,8 @@ case $1 in
     help)
         help
         ;;
-    refresh-local)
-        refreshlocal
+    sync-local)
+        synclocal
         ;;
     *)
         help
