@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+help() {
+    echo "Usage: $0 <command> [<args>]"
+    echo "Commands:"
+    echo "  help              Show this help message"
+    echo "  refresh-local     Refresh local dotfiles"
+}
+
+# Command to copy local dotfiles to dotfiles on drive
+refreshlocal() {
+    echo "Are you sure? This will overwrite your dotfiles on the drive with your local dotfiles."
+    read -p "Continue? [y/N] " -n 1 -r
+
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        echo "Refreshing local dotfiles..."
+        currentDir=$(pwd)
+
+        cd $HOME/RinnOS
+        
+        I=0
+        while [ ! $I -eq $(yq '.local | length' dotfiles.yaml) ]; do
+            localdotfile=$(yq .local[$I] dotfiles.yaml)
+            LOCALDOTDIR=$(yq .paths.localdotdir config.yaml)
+
+            echo
+            echo "Copying ${HOME}/${localdotfile} to ${LOCALDOTDIR}/${localdotfile}"
+            cp -faTu "${HOME}/${localdotfile}" "${LOCALDOTDIR}/${localdotfile}"
+            ((I++))
+        done
+    fi
+}
+
+# Switch statement for commands
+case $1 in
+    help)
+        help
+        ;;
+    refresh-local)
+        refreshlocal
+        ;;
+    *)
+        help
+        ;;
+esac
