@@ -40,24 +40,9 @@ git clone $(yq .links.wallpapers RinnOS/config.yaml)
 echo "Getting dotfiles..."
 chezmoi init --apply $(yq .links.dotfiles RinnOS/config.yaml)
 
-# I=0
-# while [ $I -le $(yq '.git | length' dotfiles.yaml) ]; do
-#     dotfile=$(yq .git[$I] dotfiles.yaml)
-#     DOTDIR=$(yq .paths.dotdir config.yaml)
-
-#     if [ -z "$dotfile" ]; then
-#         break
-#     fi
-
-#     rm -rf "${HOME}/$dotfile"
-#     echo
-#     echo "Linking ${DOTDIR}/${dotfile} to ${HOME}/${dotfile}"
-#     cp -faTs "${DOTDIR}/${dotfile}" "${HOME}/${dotfile}"
-#     ((I++))
-# done
 cd $HOME/RinnOS
 
-sh ./dotfiles/scripts/mountDrives.sh
+sh $HOME/scripts/mountDrives.sh
 I=0
 while [ ! $I -eq $(yq '.local | length' dotfiles.yaml) ]; do
     localdotfile=$(yq .local[$I] dotfiles.yaml)
@@ -83,13 +68,6 @@ fi
 
 sudo usermod -G libvirtd -a "${USER}"
 
-echo "--------------------------------"
-echo "-- Setting up optimus-manager --"
-echo "--------------------------------"
-
-echo "Copying optimus-manager config..."
-sudo cp ./files/optimus-manager.conf /etc/optimus-manager/optimus-manager.conf
-
 echo "-------------------------"
 echo "-- Some extra stuff... --"
 echo "-------------------------"
@@ -97,6 +75,10 @@ echo
 
 echo "Setting RTC to local time"
 sudo timedatectl set-local-rtc 1
+
+echo
+echo "Copying optimus-manager config..."
+sudo cp ./files/optimus-manager.conf /etc/optimus-manager/optimus-manager.conf
 
 echo
 echo "Changing default shell to zsh"
