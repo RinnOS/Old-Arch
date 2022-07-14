@@ -1,17 +1,3 @@
-git:
-  # --- Home ---
-  - .zshrc
-  - .gitconfig
-  - .emacs.d
-  - .doom.d
-  - wallpapers
-  - scripts
-
-  # --- .config ---
-  - .config/i3
-  - .config/pulsemeeter
-  - .config/flameshot
-
 local:
   # --- Home ---
   - .ssh
