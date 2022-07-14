@@ -17,12 +17,8 @@ if [ ! -f /usr/bin/yay ]; then
 fi
 
 I=0
-while [ $I -le $(yq '.aur | length' packages.yaml) ]; do
+while [ ! $I -eq $(yq '.aur | length' packages.yaml) ]; do
     PKG=$(yq .aur[$I] packages.yaml)
-
-    if [ -z "$PKG" ]; then
-        break
-    fi
 
     echo "Installing $PKG"
     yay -S --noconfirm $PKG

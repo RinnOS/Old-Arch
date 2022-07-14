@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Make sure script is run with sudo
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root"
+  exit 1
+fi
+
 loopScript=true
 
 while $loopScript; do
@@ -18,12 +24,12 @@ while $loopScript; do
 
     # If they chose to install base packages, run the base-packages.sh script.
     if [ $choice -eq 1 ]; then
-        sh 1-base.sh || exit 1
+        sudo sh 1-base.sh || exit 1
     fi
 
     # If they chose to install software packages, run the software-packages.sh script.
     if [ $choice -eq 2 ]; then
-        sh 2-software-pacman.sh || exit 1
+        sudo sh 2-software-pacman.sh || exit 1
     fi
 
     # If they chose to install AUR packages, run the aur-packages.sh script.
@@ -38,7 +44,7 @@ while $loopScript; do
 
     # If they chose to run the post-installation script, run the post-setup.sh script.
     if [ $choice -eq 5 ]; then
-        sh 9-post-setup.sh || exit 1
+        sudo sh 9-post-setup.sh || exit 1
     fi
 
     # If they chose to run all, run the base-packages.sh script, then the software-packages.sh script, then the aur-packages.sh script, then the appimage-packages.sh script.
@@ -47,11 +53,11 @@ while $loopScript; do
         echo "Are you sure you want to run all? (y/n)"
         read sure
         if [ $sure == "y" ]; then
-            sh 1-base.sh || exit 1
-            sh 2-software-pacman.sh || exit 1
+            sudo sh 1-base.sh || exit 1
+            sudo sh 2-software-pacman.sh || exit 1
             sh 3-software-aur.sh || exit 1
             sh 4-software-appimage.sh || exit 1
-            sh 9-post-setup.sh || exit 1
+            sudo sh 9-post-setup.sh || exit 1
         fi
     fi
 

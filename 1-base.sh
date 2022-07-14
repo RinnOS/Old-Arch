@@ -9,7 +9,7 @@ echo
 sudo pacman -Syu go-yq --noconfirm
 
 I=0
-while [ $I -le $(yq '.base | length' packages.yaml) ]; do
+while [ ! $I -eq $(yq '.base | length' packages.yaml) ]; do
     PKG=$(yq .base[$I] packages.yaml)
     echo "Installing $PKG"
     sudo pacman -S $PKG --noconfirm --needed
@@ -17,12 +17,8 @@ while [ $I -le $(yq '.base | length' packages.yaml) ]; do
 done
 
 I=0
-while [ $I -le $(yq '.drives | length' config.yaml) ]; do
+while [ ! $I -eq $(yq '.drives | length' config.yaml) ]; do
     DRIVE=$(yq .drives[$I] config.yaml)
-
-    if [ -z "$DRIVE" ]; then
-        break
-    fi
 
     if [ ! -d "/mnt/$DRIVE" ]; then
         echo "Creating folder /mnt/$DRIVE"
