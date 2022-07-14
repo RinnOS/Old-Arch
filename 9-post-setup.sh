@@ -57,6 +57,7 @@ chezmoi init --apply $(yq .links.dotfiles RinnOS/config.yaml)
 # done
 cd $HOME/RinnOS
 
+sh ./dotfiles/scripts/mountDrives.sh
 I=0
 while [ $I -le $(yq '.local | length' dotfiles.yaml) ]; do
     localdotfile=$(yq .local[$I] dotfiles.yaml)

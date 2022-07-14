@@ -5,9 +5,6 @@ echo "## INSTALLING AUR PACKAGES ##"
 echo "#############################"
 echo
 
-#echo "Please enter username:"
-#read username
-
 if [ ! -f /usr/bin/yay ]; then
     cd "${HOME}"
     echo "Cloning YAY"

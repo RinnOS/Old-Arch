@@ -20,12 +20,20 @@ I=0
 while [ $I -le $(yq '.drives | length' config.yaml) ]; do
     DRIVE=$(yq .drives[$I] config.yaml)
 
+    if [ -z "$DRIVE" ]; then
+        break
+    fi
+
     if [ ! -d "/mnt/$DRIVE" ]; then
         echo "Creating folder /mnt/$DRIVE"
         sudo mkdir "/mnt/$DRIVE"
     fi
 
-    sudo echo LABEL=$DRIVE /mnt/$DRIVE auto defaults 0 0 >> /etc/fstab
+    #sudo echo LABEL=$DRIVE /mnt/$DRIVE auto defaults 0 0 >> /etc/fstab
+
+    sudo cat << EOF >> /etc/fstab
+LABEL=$DRIVE /mnt/$DRIVE auto defaults 0 0
+EOF
 
     ((I++))
 done
