@@ -145,6 +145,7 @@ pacman:
   - grub-customizer
   - numlockx
   - chezmoi
+  - gnome-disk-utility
 
   # --- Uncategorized ---
   - aspell

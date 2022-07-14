@@ -29,6 +29,8 @@ refreshlocal() {
             cp -faTu "${HOME}/${localdotfile}" "${LOCALDOTDIR}/${localdotfile}"
             ((I++))
         done
+
+        cd $currentDir
     fi
 }
 
