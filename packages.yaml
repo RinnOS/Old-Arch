@@ -147,6 +147,7 @@ pacman:
   - chezmoi
   - gnome-disk-utility
   - nitrogen
+  - dmenu
 
   # --- Uncategorized ---
   - gnome-themes-extra
