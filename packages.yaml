@@ -149,6 +149,7 @@ pacman:
   - nitrogen
 
   # --- Uncategorized ---
+  - gnome-themes-extra
   - aspell
   - aspell-en
   - aspell-sv
