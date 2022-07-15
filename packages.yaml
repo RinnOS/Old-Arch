@@ -146,6 +146,7 @@ pacman:
   - numlockx
   - chezmoi
   - gnome-disk-utility
+  - nitrogen
 
   # --- Uncategorized ---
   - aspell
