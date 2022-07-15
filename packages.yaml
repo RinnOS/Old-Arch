@@ -148,6 +148,7 @@ pacman:
   - gnome-disk-utility
   - nitrogen
   - dmenu
+  - rofi
 
   # --- Uncategorized ---
   - gnome-themes-extra
