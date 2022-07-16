@@ -149,6 +149,7 @@ pacman:
   - nitrogen
   - dmenu
   - rofi
+  - polybar
 
   # --- Uncategorized ---
   - gnome-themes-extra
