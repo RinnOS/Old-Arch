@@ -138,6 +138,7 @@ pacman:
   - ripgrep
   - fd
   - coreutils
+  - gvfs
 
   # --- Utilities ---
   - imwheel
