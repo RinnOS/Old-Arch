@@ -150,6 +150,7 @@ pacman:
   - dmenu
   - rofi
   - polybar
+  - dunst
 
   # --- Uncategorized ---
   - gnome-themes-extra
