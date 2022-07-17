@@ -175,6 +175,8 @@ aur:
   - wtwitch
   - ani-cli
   - yt-dlp
+  - nuclear-player-bin
+  - spotify
 
   # --- Development ---
   - visual-studio-code-bin
@@ -195,3 +197,6 @@ appimage:
   - name: Example
     url: https://google.com
     version: 0.2.2
+  - name: Rambox
+    url: https://rambox.app/api/download?os=linux&package=AppImage
+    version: 2.0.6
