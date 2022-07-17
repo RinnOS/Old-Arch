@@ -151,6 +151,7 @@ pacman:
   - rofi
   - polybar
   - dunst
+  - thunar
 
   # --- Uncategorized ---
   - gnome-themes-extra
