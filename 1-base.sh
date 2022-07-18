@@ -11,6 +11,7 @@ echo "## INSTALLING BASE PACKAGES ##"
 echo "##############################"
 echo
 
+sudo cp ./files/locale.gen /etc/locale.gen
 
 sudo pacman -Syu go-yq --noconfirm
 
