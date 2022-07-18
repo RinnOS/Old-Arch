@@ -141,6 +141,7 @@ pacman:
   - fd
   - coreutils
   - gvfs
+  - playerctl
 
   # --- Utilities ---
   - imwheel
@@ -198,6 +199,9 @@ aur:
   # --- Games ---
   - itch
   - polymc
+
+  # --- Dependencies ---
+  - zscroll
 
 appimage:
   - name: Example
