@@ -179,6 +179,7 @@ aur:
 
   # --- Fonts ---
   - nerd-fonts-complete
+  - ttf-all-the-icons
 
   # --- Audio/Video ---
   - pulsemeeter
