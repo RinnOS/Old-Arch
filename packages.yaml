@@ -91,6 +91,7 @@ base:
 
 pacman:
   # --- Terminal ---
+  - alacritty
   - vim
   - wget
   - calc
