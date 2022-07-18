@@ -33,6 +33,7 @@ base:
   - ttf-fira-code
 
   # --- Uncategorized | Related to Wine hell ---
+  - picom
   - nvidia-utils
   - nvidia-dkms
   - lib32-nvidia-utils
