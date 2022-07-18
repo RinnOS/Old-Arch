@@ -177,6 +177,9 @@ aur:
   - ventoy
   - betterdiscordctl
 
+  # --- Fonts ---
+  - nerd-fonts-complete
+
   # --- Audio/Video ---
   - pulsemeeter
   - wtwitch
