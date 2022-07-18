@@ -12,6 +12,7 @@ echo "##############################"
 echo
 
 sudo cp ./files/locale.gen /etc/locale.gen
+sudo cp ./files/locale.conf /etc/locale.conf
 
 sudo pacman -Syu go-yq --noconfirm
 
