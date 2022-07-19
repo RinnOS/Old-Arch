@@ -142,6 +142,7 @@ pacman:
   - coreutils
   - gvfs
   - playerctl
+  - ctags
 
   # --- Utilities ---
   - imwheel

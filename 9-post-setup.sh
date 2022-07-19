@@ -76,6 +76,12 @@ fi
 
 sudo usermod -G libvirtd -a "${USER}"
 
+echo "--------------------------"
+echo "-- Global Node packages --"
+echo "--------------------------"
+
+sudo npm install -g n
+
 echo "-------------------------"
 echo "-- Some extra stuff... --"
 echo "-------------------------"
