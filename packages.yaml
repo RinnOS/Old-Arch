@@ -212,7 +212,7 @@ aur:
   # --- Dependencies ---
   - zscroll
 
-flatpaks:
+flatpak:
   - bottles
 
 appimage:
