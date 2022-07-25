@@ -96,6 +96,7 @@ pacman:
   - wget
   - calc
   - neofetch
+  - pulsemixer
 
   # --- Games ---
   - steam
