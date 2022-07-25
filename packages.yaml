@@ -159,6 +159,7 @@ pacman:
   - dunst
   - thunar
   - ranger
+  - flatpak
 
   # --- Uncategorized ---
   - gnome-themes-extra
