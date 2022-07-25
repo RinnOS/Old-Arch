@@ -40,6 +40,9 @@ EOF
     ((I++))
 done
 
-echo "###########"
-echo "## DONE! ##"
-echo "###########"
+# Tell the user that a reboot is needed then to continue afterwards
+echo "Reboot is required to finish installation."
+echo "Please reboot and continue to run these scripts again afterwards."
+echo "Press enter to continue."
+read
+reboot

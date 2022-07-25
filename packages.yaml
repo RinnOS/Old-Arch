@@ -32,6 +32,9 @@ base:
   - ttf-font-awesome
   - ttf-fira-code
 
+  # --- Utilities ---
+  - flatpak
+
   # --- Uncategorized | Related to Wine hell ---
   - picom
   - nvidia-utils
@@ -159,7 +162,6 @@ pacman:
   - dunst
   - thunar
   - ranger
-  - flatpak
 
   # --- Uncategorized ---
   - gnome-themes-extra
@@ -209,6 +211,9 @@ aur:
 
   # --- Dependencies ---
   - zscroll
+
+flatpaks:
+  - bottles
 
 appimage:
   - name: Example
