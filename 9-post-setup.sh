@@ -100,6 +100,7 @@ chsh -s $(which zsh)
 
 echo
 echo "Syncing Doom emacs"
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 cd $HOME/.emacs.d/bin
 sh doom sync
 
