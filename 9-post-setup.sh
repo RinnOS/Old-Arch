@@ -103,6 +103,10 @@ echo "Syncing Doom emacs"
 cd $HOME/.emacs.d/bin
 sh doom sync
 
+echo
+echo "Adding user to docker group"
+sudo usermod -aG docker $USER
+
 echo "###########"
 echo "## DONE! ##"
 echo "###########"
