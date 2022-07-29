@@ -87,6 +87,10 @@ echo "-- Some extra stuff... --"
 echo "-------------------------"
 echo
 
+echo "Installing language servers..."
+sh $HOME/RinnOS/10-language-servers.sh
+
+echo
 echo "Setting RTC to local time"
 sudo timedatectl set-local-rtc 1
 
