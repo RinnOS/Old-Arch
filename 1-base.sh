@@ -14,6 +14,9 @@ echo
 sudo cp ./files/locale.gen /etc/locale.gen
 sudo cp ./files/locale.conf /etc/locale.conf
 
+sudo mkdir /etc/openal
+sudo cp ./files/alsoft.conf /etc/openal/alsoft.conf
+
 sudo pacman -Syu go-yq --noconfirm
 
 I=0
