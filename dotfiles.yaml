@@ -22,3 +22,6 @@ local:
   - .local/share/vulkan
   - .local/share/PolyMC
   - .local/share/7DaysToDie
+
+  # --- .steam ---
+  - .steam/root/compatibilitytools.d
