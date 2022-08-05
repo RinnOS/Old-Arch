@@ -217,6 +217,7 @@ aur:
 
 flatpak:
   - bottles
+  - com.github.tchx84.Flatseal
 
 appimage:
   - name: Example
