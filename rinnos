@@ -21,8 +21,8 @@ synclocal() {
         
         I=0
         while [ ! $I -eq $(yq '.local | length' dotfiles.yaml) ]; do
-            localdotfile=$(yq .local[$I] dotfiles.yaml)
-            LOCALDOTDIR=$(yq .paths.localdotdir config.yaml)
+            localdotfile=$(yq -r .local[$I] dotfiles.yaml)
+            LOCALDOTDIR=$(yq -r .paths.localdotdir config.yaml)
 
             echo
             echo "Copying ${HOME}/${localdotfile} to ${LOCALDOTDIR}/${localdotfile}"

@@ -53,8 +53,8 @@ cd $HOME/RinnOS
 sh $HOME/scripts/mountDrives.sh
 I=0
 while [ ! $I -eq $(yq '.local | length' dotfiles.yaml) ]; do
-    localdotfile=$(yq .local[$I] dotfiles.yaml)
-    LOCALDOTDIR=$(yq .paths.localdotdir config.yaml)
+    localdotfile=$(yq -r .local[$I] dotfiles.yaml)
+    LOCALDOTDIR=$(yq -r .paths.localdotdir config.yaml)
 
     rm -rf "${HOME}/${localdotfile}"
     echo
