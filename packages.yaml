@@ -37,6 +37,8 @@ base:
 
   # --- Uncategorized | Related to Wine hell ---
   - i3-gaps
+  - lxappearance
+  - qt5ct
   - picom
   - nvidia-utils
   - nvidia-dkms
