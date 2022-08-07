@@ -5,9 +5,9 @@ autostart:
     sleep: 3
 
 links:
-  rinnos: https://gitlab.com/RinnOS/RinnOS.git
-  dotfiles: https://gitlab.com/RinnOS/Dotfiles.git
-  wallpapers: https://gitlab.com/RinnOS/Wallpapers.git
+  rinnos: git@gitlab.com:rinnos/rinnos.git 
+  dotfiles: git@gitlab.com:rinnos/dotfiles.git
+  wallpapers: git@gitlab.com/rinnos/wallpapers.git
 
 paths:
   localdotdir: /mnt/Vault/Dotfiles/Linux/Arch
