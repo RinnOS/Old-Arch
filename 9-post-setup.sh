@@ -117,6 +117,8 @@ echo "Changing perms for ssh"
 cd $HOME/.ssh
 chmod 600 id_25519
 chmod 600 id_25519_sk
+chmod 600 config
+chmod 600 gitlab
 
 echo "###########"
 echo "## DONE! ##"
