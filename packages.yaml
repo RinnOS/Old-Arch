@@ -36,6 +36,7 @@ base:
   - flatpak
 
   # --- Uncategorized | Related to Wine hell ---
+  - sddm
   - i3-gaps
   - lxappearance
   - qt5ct

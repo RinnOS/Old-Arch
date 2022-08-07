@@ -45,6 +45,10 @@ EOF
     ((I++))
 done
 
+echo 
+echo "Enabling services..."
+sudo systemctl enable sddm
+
 # Tell the user that a reboot is needed then to continue afterwards
 echo "Reboot is required to finish installation."
 echo "Please reboot and continue to run these scripts again afterwards."
