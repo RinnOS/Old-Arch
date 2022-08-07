@@ -14,6 +14,8 @@ echo
 sudo cp ./files/locale.gen /etc/locale.gen
 sudo cp ./files/locale.conf /etc/locale.conf
 
+sudo locale-gen
+
 sudo mkdir /etc/openal
 sudo cp ./files/alsoft.conf /etc/openal/alsoft.conf
 
