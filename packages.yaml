@@ -36,6 +36,7 @@ base:
   - flatpak
 
   # --- Uncategorized | Related to Wine hell ---
+  - i3-gaps
   - picom
   - nvidia-utils
   - nvidia-dkms
@@ -201,6 +202,7 @@ aur:
   - visual-studio-code-bin
   - gitfiend
   - debtap
+  - neovim
 
   # --- Applications ---
   - freetube-bin
