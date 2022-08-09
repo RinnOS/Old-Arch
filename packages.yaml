@@ -188,6 +188,7 @@ aur:
   - yt-dlg
   - ventoy
   - betterdiscordctl
+  - inkdrop
 
   # --- Fonts ---
   - nerd-fonts-complete
@@ -228,6 +229,9 @@ appimage:
   - name: Example
     url: https://google.com
     version: 0.2.2
+  - name: Todoist
+    url: https://todoist.com/linux_app/appimage
+    version: 1.0.7
   - name: Rambox
     url: https://rambox.app/api/download?os=linux&package=AppImage
     version: 2.0.6
