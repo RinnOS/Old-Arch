@@ -229,6 +229,9 @@ appimage:
   - name: Example
     url: https://google.com
     version: 0.2.2
+  - name: Anytype
+    url: https://download.anytype.io/?action=download&key=desktop&id=73317352
+    version: 0.27.0
   - name: Todoist
     url: https://todoist.com/linux_app/appimage
     version: 1.0.7
