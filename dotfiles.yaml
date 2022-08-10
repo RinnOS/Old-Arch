@@ -3,6 +3,7 @@ local:
   - .ssh
   - .waterfox
   - .vscode
+  - .gitconfig
 
   # --- .config ---
   - .config/BetterDiscord
