@@ -1,13 +1,9 @@
 first_run: true
 
-autostart:
-  - name: discord
-    sleep: 3
-
 links:
-  rinnos: git@gitlab.com:rinnos/rinnos.git 
-  dotfiles: git@gitlab.com:rinnos/dotfiles.git
-  wallpapers: git@gitlab.com/rinnos/wallpapers.git
+  rinnos: git@github.com:RinnOS/Arch.git 
+  dotfiles: git@github.com:RinnOS/Dotfiles.git
+  wallpapers: git@github.com/RinnOS/Wallpapers.git
 
 paths:
   localdotdir: /mnt/Vault/Dotfiles/Linux/Arch
