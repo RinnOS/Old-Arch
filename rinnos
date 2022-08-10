@@ -4,7 +4,7 @@ help() {
     echo "Usage: rinnos <command> [<args>]"
     echo "Commands:"
     echo "  help              Show this help message"
-    echo "  refresh-local     Refresh local dotfiles"
+    echo "  sync-local     Refresh local dotfiles"
 }
 
 # Command to copy local dotfiles to dotfiles on drive
