@@ -119,6 +119,8 @@ pacman:
   - npm
   - yarn
   - git
+  - blender
+  - godot
 
   # --- Virtualization ---
   - virtualbox
