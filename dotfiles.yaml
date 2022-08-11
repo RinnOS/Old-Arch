@@ -16,6 +16,7 @@ local:
   - .config/Rambox
   - .config/rambox
   - .config/wtwitch
+  - .config/inkdrop
 
   # --- .local ---
   - .local/share/lutris
