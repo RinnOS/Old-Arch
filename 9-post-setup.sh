@@ -113,6 +113,10 @@ echo "Adding user to docker group"
 sudo usermod -aG docker $USER
 
 echo
+echo "Adding user to libvirt group"
+sudo usermod -aG libvirt $USER
+
+echo
 echo "Changing perms for ssh"
 cd $HOME/.ssh
 chmod 600 id_25519

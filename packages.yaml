@@ -1,9 +1,5 @@
 base:
   # --- Audio ---
-  - pulseaudio
-  - pulseaudio-alsa
-  - pulseaudio-bluetooth
-  - pulseaudio-jack
   - ffmpeg
 
   # --- Bluetooth ---
@@ -219,6 +215,7 @@ aur:
   # --- Games ---
   - itch
   - polymc
+  - heroic-games-launcher-bin
 
   # --- Dependencies ---
   - zscroll
