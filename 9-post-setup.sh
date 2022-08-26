@@ -26,6 +26,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/alias-tips
 
 echo "--------------"
 echo "-- Vim-plug --"
@@ -113,8 +114,7 @@ echo "Adding user to docker group"
 sudo usermod -aG docker $USER
 
 echo
-echo "Adding user to libvirt group"
-sudo usermod -aG libvirt $USER
+echo "Adding"
 
 echo
 echo "Changing perms for ssh"
